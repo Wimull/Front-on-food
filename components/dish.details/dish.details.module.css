@@ -1,0 +1,11 @@
+.detalhes {
+  @apply flex items-center;
+  @apply text-sm text-[#626264];
+}
+
+.icon {
+  @apply m-2 flex items-center;
+}
+.icon svg {
+  @apply h-4 w-4 fill-[#A3A3A4];
+}
