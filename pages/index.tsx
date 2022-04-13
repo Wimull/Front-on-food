@@ -18,7 +18,6 @@ const Home: NextPage = () => {
           Descubra seu novo Delivery favorito. Milhares de opções a um clique.
         </h2>
       </PageTemplate>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   );
 };
