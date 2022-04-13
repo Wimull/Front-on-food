@@ -1,0 +1,12 @@
+.content h1 {
+	@apply text-left font-semibold text-xl leading-6;
+	@apply md:text-2xl md:font-bold md:leading-8 mb-4;
+	color: var(--text-color-primary);
+}
+.content p {
+	@apply text-left font-normal text-sm leading-3 mt-0 mb-8;
+	@apply md:text-base md:leading-8 text-[#182135];
+}
+.items {
+	@apply flex flex-col md:flex-row w-full gap-8;
+}
