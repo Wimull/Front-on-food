@@ -1,13 +1,26 @@
 import { DishDetails } from "..";
 import Image from "next/image";
 import Styles from "./dish.module.css";
+let img: string
+fetch("https://api.imersaofx.danieldcs.com/deliveries?city=sao-paulo-sp", {
+	method: "GET",
+	credentials: "omit",
+	headers: {
+		"Authentication": "Bearer YW5pbmhhc2lsdmFAdHV0YW5vdGEuY29t",
+		'Content-Type': 'application/json',
+		"access-control-allow-origin": "*"
+	}
+}).then((x) => {	
+	return x.json()
+}).then((y) => img = y[0].picture)
+
 
 export function Dish() {
 	return (
 		<div className={Styles.dish}>
 			<div className={Styles.wrapper}>
 				<Image
-					src="https://storage.googleapis.com/onfood/peperoni.jpg"
+					src={img}
 					alt="Prato"
 					width={592}
 					height={312}
