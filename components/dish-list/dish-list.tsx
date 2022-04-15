@@ -6,20 +6,19 @@ import React, {useEffect, useState} from "react";
 export function DishList(){
     let product:any, setProduct:any
 	const router = useRouter();
+    [product, setProduct] = useState({});
 	const city = router.query.city;
 	let dishesFound = "x", dishList = ""
     let data:any = {
-    city: city,
-    name: "Nome do Produto",
-    reviewsTitle: "(201)",
-    reviewsSubtitle:"4,5",
-    category:"Categoria",
-    delivery:"30 - 40 min",
-    img: "https://storage.googleapis.com/onfood/burguer.jpg"
-  };
+        city: city,
+        name: "Nome do Produto",
+        reviewsTitle: "(201)",
+        reviewsSubtitle:"4,5",
+        category:"Categoria",
+        delivery:"30 - 40 min",
+        img: "https://storage.googleapis.com/onfood/burguer.jpg"
+    };
     let dishes = [data];
-
-	[product, setProduct] = useState({})
 
 	const getProduct = async () => {
 		try{
